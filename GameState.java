@@ -31,12 +31,19 @@ public class GameState {
     private boolean finished;
     private BooleanProperty undoStateP;
     private BooleanProperty ready;
-    
-    public GameState(int k, User player1, User player2) { //k is board size (e.g. height), player1 is a user object
+/**
+ * Creat a game state. 
+ *@param k The k is board size (length or width).
+ *@param player1 player2 Those are user objects.
+ *@author wei
+ */
+    public GameState(int k, User player1, User player2) { 
         board = new int[k][k]; //0 in the array will mean empty, 1 will mean black and 2 will mean white
         this.player1 = player1;
         this.player2 = player2;
-        if (player1.getWinRate() > player2.getWinRate()) {
+        if (player1.getWinRate() > player2.getWinRate()) {// decide which is the first player, 
+		                                    //the one which holds the higher winrate is white,
+											//while the one holds the lower winrate is balck(play first)
             white = player1.getUsername();
             black = player2.getUsername();
         }
@@ -73,7 +80,7 @@ public class GameState {
         }
         passCount = 0;
         passCountP.set("" + passCount);
-        for (int i = 0; i < board.length; ++i) {
+        for (int i = 0; i < board.length; ++i) { 
             for (int j = 0; j < board.length; ++j) {
                 previousBoard2[i][j] = previousBoard[i][j];
             }
@@ -242,7 +249,7 @@ public class GameState {
         return capsWP;
     }
     
-    public void pass() {
+    public void pass() { // passcount is 2, game is over.
         ++passCount;
         passCountP.set("" + passCount);
         if (passCount == PASS_LIMIT) {
@@ -254,7 +261,7 @@ public class GameState {
         }
         ++turnNo;
         turnNoP.set("" + turnNo);
-        if (turnNo % 2 == 0) {
+        if (turnNo % 2 == 0) { // decide to turn black or white
             currentPlayerTurn = black;
         }
         else {

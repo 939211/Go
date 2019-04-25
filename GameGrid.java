@@ -12,12 +12,19 @@ import javafx.scene.shape.Rectangle;
 public class GameGrid extends GridPane {
     
     private Tile[][] grid;
-    
+/**
+ * creat a game grid board.
+ */ 
     public GameGrid(int k) {
         grid = new Tile[k][k];
         makeGrid(k);
     }
-    
+/**
+ * Define four different corners and edges.
+ *@param i The i-coordiante.
+ *@param j The j-coordiante.
+ *@author wei
+ */
     private void makeGrid(int k) {
         for (int i = 0; i < k; ++i) {
             for (int j = 0; j < k; ++j) {
@@ -60,11 +67,15 @@ public class GameGrid extends GridPane {
             }
         }
     }
-    
+/**
+ *@return tile[][] grid
+ */ 
     public Tile[][] getGrid() {
         return grid;
     }
-    
+/**
+ * Update the number of piece when game is over.
+ */ 
     public void updateGrid() {
         for (int i = 0; i < GameContainer.getG().getBoard().length; ++i) {
             for (int j = 0; j < GameContainer.getG().getBoard().length; ++j) {
@@ -91,7 +102,10 @@ public class GameGrid extends GridPane {
             }
         }
     }
-    
+/**
+ *Update the score of piece wnen game over.
+ *@param score The number of black(white) on board when game over.
+ */ 
     public void updateGrid(Score score) {
         for (int i = 0; i < score.getEndingBoard().length; ++i) {
             for (int j = 0; j < score.getEndingBoard().length; ++j) {
