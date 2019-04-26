@@ -13,17 +13,17 @@ public class GameGrid extends GridPane {
     
     private Tile[][] grid;
 /**
- * creat a game grid board.
+ *Creat a game grid board.
+ *@param k The k grid board size(length or width).
  */ 
     public GameGrid(int k) {
         grid = new Tile[k][k];
         makeGrid(k);
     }
 /**
- * Define four different corners and edges.
+ *Define four different corners and edges.
  *@param i The i-coordiante.
  *@param j The j-coordiante.
- *@author wei
  */
     private void makeGrid(int k) {
         for (int i = 0; i < k; ++i) {
@@ -74,7 +74,7 @@ public class GameGrid extends GridPane {
         return grid;
     }
 /**
- * Update the number of piece when game is over.
+ * Update the grid board of black(white) when game is over.
  */ 
     public void updateGrid() {
         for (int i = 0; i < GameContainer.getG().getBoard().length; ++i) {
@@ -104,7 +104,7 @@ public class GameGrid extends GridPane {
     }
 /**
  *Update the score of piece wnen game over.
- *@param score The number of black(white) on board when game over.
+ *@param score The total number of black(white) on board when game over.
  */ 
     public void updateGrid(Score score) {
         for (int i = 0; i < score.getEndingBoard().length; ++i) {

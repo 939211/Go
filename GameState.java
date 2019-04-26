@@ -34,16 +34,16 @@ public class GameState {
 /**
  * Creat a game state. 
  *@param k The k is board size (length or width).
- *@param player1 player2 Those are user objects.
- *@author wei
+ *@param player1 player2 Those players are user objects.
+ *
  */
     public GameState(int k, User player1, User player2) { 
         board = new int[k][k]; //0 in the array will mean empty, 1 will mean black and 2 will mean white
         this.player1 = player1;
         this.player2 = player2;
         if (player1.getWinRate() > player2.getWinRate()) {// decide which is the first player, 
-		                                    //the one which holds the higher winrate is white,
-											//while the one holds the lower winrate is balck(play first)
+		                                                 //the one which holds the higher winrate is white,
+											            //while the one holds the lower winrate is balck(play first)
             white = player1.getUsername();
             black = player2.getUsername();
         }
@@ -71,7 +71,11 @@ public class GameState {
         ready = new SimpleBooleanProperty(false);
     }
     
-    //y is the first index, x is the second index, starting from (0,0) in the top left corner to (k-1, k-1)
+/**
+ *Get a placing piece position, capture black(white) when do situaion.
+ *@param y The y is the first index, 
+ *@param x The x is the second index, starting from (0,0) in the top left corner to (k-1, k-1)
+ */
     public void placePiece(int y, int x) {
         int currentPlayerColour = (currentPlayerTurn == white) ? WHITE : BLACK;
         int otherPlayerColour = (currentPlayerColour == BLACK) ? WHITE : BLACK;
@@ -128,7 +132,9 @@ public class GameState {
         undoStateP.set(false);
         return;
     }
-    
+/**
+ *Get piece state when undo situation.
+ */
     public void undoLastMove() {
         if (passCount > 0) {
             return;
@@ -248,8 +254,10 @@ public class GameState {
     public StringProperty getCapsWP() {
         return capsWP;
     }
-    
-    public void pass() { // passcount is 2, game is over.
+/**
+ *Passcount is 2, game is over.
+ */
+    public void pass() {
         ++passCount;
         passCountP.set("" + passCount);
         if (passCount == PASS_LIMIT) {
@@ -271,8 +279,7 @@ public class GameState {
         return;
     }
     
-    public void forfeitAndQuit() { //optional method that I didn't have time to implement
-        //stuff
+    public void forfeitAndQuit() { 
         return;
     }
 }
