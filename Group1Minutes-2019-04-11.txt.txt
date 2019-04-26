@@ -1,0 +1,16 @@
+ 
+
+Minutes of Meeting: Oliver, Hao Ren (Barney), Cheng Qian (Sebastian), Wei Hei (Sam), Qing Yuan Ding (Jhon)
+------------------------------------------------------------------------------------------------------------------
+date: 11 Apri '19
+start time: 13:00
+end time: 14:00
+
+progress since last meeting: 
+    -- Design GUI
+    -- Make ¡®login¡¯ button perfect 
+    -- How to construct database(Login Systems: User, Adminstrator, Player)
+      
+
+Next meeting datatime:  Next Tuesday
+ 

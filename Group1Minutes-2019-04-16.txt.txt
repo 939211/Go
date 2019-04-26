@@ -1,0 +1,25 @@
+ 
+
+Minutes of Meeting Oliver, Hao Ren (Barney), Cheng Qian (Sebastian), Wei Hei (Sam), Qing Yuan Ding (Jhon)
+------------------------------------------------------------------------------------------------------------------
+date 16 Apri '19
+start time 13£º00
+end time 14£º30
+
+topics discussed:
+  -- user input
+  -- GUI (most complete) 
+  -- profile image (uncomplete)
+  -- record(done)
+  -- gamestate (most complete)
+  -- database (Barney)
+  -- user class (most complete)
+
+undo:
+    -- improve record history
+    -- profile image
+    -- improve the GUI
+    -- make better dask
+    -- improve code
+    -- Javadoc
+    -- record the demonstration video

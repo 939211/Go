@@ -1,0 +1,19 @@
+ 
+
+Minutes of Meeting: Oliver, Hao Ren (Barney), Cheng Qian (Sebastian), Wei Hei (Sam), Qing Yuan Ding (Jhon)
+------------------------------------------------------------------------------------------------------------------
+date: 05 Apri '19
+start time: 14:00
+end time: 15:00
+
+progress since last meeting:  
+  -- complete tasks that were not completed in the previous assignment
+
+To do next meeting:
+    -- Oliver: score class, user input class, GUI
+    -- Hao: record class, GUI
+    -- Cheng: expection handing code
+    -- Wei: GameState class
+    -- Qing: player class
+
+Next meeting: next thursday
